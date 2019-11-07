@@ -1,5 +1,5 @@
 ### Hello, Do you know about component development ?
-#### If you don't know, please click here : [CmonBaby](https://cmonbaby.com)
+#### If you don't know, please click here : [CmonBaby](https://www.cmonbaby.com)
 
 ## Arouter ![Build Status](https://travis-ci.org/greenrobot/EventBus.svg?branch=master)
 
@@ -63,23 +63,23 @@ annotationProcessor 'com.cmonbaby.arouter.compiler:arouter_compiler:2.1.0'
 Via Maven:
 ```xml
 <dependency>
-	<groupId>com.cmonbaby.arouter.annotation</groupId>
-	<artifactId>arouter_annotation</artifactId>
-	<version>2.1.0</version>
+    <groupId>com.cmonbaby.arouter.annotation</groupId>
+    <artifactId>arouter_annotation</artifactId>
+    <version>2.1.0</version>
 </dependency>
 <dependency>
-	<groupId>com.cmonbaby.arouter.compiler</groupId>
-	<artifactId>arouter_compiler</artifactId>
-	<version>2.1.0</version>
+    <groupId>com.cmonbaby.arouter.compiler</groupId>
+    <artifactId>arouter_compiler</artifactId>
+    <version>2.1.0</version>
 </dependency>
 <dependency>
-	<groupId>com.cmonbaby.arouter.core</groupId>
-	<artifactId>arouter_core</artifactId>
-	<version>2.1.0</version>
+    <groupId>com.cmonbaby.arouter.core</groupId>
+    <artifactId>arouter_core</artifactId>
+    <version>2.1.0</version>
 </dependency>
 ```
 
 ## License
 
-Copyright (C) 2013-2020 Markus Junginger, Simon (https://cmonbaby.com)
+Copyright (C) 2013-2020 Markus Junginger, Simon (https://www.cmonbaby.com)
 Arouter binaries and source code can be used according to the [Apache License, Version 2.0](LICENSE).
