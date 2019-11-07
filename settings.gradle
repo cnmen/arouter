@@ -1,0 +1,2 @@
+include ':app', ':arouter_core', ':arouter_annotation', ':arouter_compiler', ':library'
+rootProject.name='ARouter_Master'

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cmonbaby.arouer.demo.library">
+
+    <application>
+        <activity android:name=".LibraryActivity"></activity>
+    </application>
+
+</manifest>
