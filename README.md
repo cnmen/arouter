@@ -1,5 +1,5 @@
 ### Hello, Do you know about component development ?
-#### If you don't know, please click here : [CmonBaby](https://www.cmonbaby.com)
+#### If you don't know, please click here : [CmonBaby](https://www.cmonbaby.com/posts/netease_modular.html)
 
 ## Arouter ![Build Status](https://travis-ci.org/greenrobot/EventBus.svg?branch=master)
 
@@ -43,9 +43,9 @@ public class MainActivity extends AppCompatActivity {}
 RouterManager.getInstance()
         .build("/library/LibraryActivity")
         .withString("name", "simon")
-	    // .withResultString("pwd", "123")
-	    // .navigation(this, requestCode);
-	    // .navigation(this, resultCode);
+        // .withResultString("pwd", "123")
+        // .navigation(this, requestCode);
+        // .navigation(this, resultCode);
         .navigation(this);
 ```
 
