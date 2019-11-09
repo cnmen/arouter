@@ -53,13 +53,17 @@ RouterManager.getInstance()
 ```java
 @ARouter(path = "/library/LibraryActivity")
 public class LibraryActivity extends AppCompatActivity {
-    
+
     @Parameter
     String name;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.e("params >>> ", name);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_library);
+
+        ParameterManager.getInstance().loadParameter(this); // Lazy loading
+        Log.e("simon >>> ", name);
     }
 }
 ```

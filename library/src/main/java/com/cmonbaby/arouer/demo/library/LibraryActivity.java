@@ -21,8 +21,7 @@ public class LibraryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_library);
 
-        ParameterManager.getInstance().loadParameter(this);
-
+        ParameterManager.getInstance().loadParameter(this); // Lazy loading
         Log.e("simon >>> ", name);
     }
 
