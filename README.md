@@ -96,5 +96,5 @@ Via Maven:
 
 ## License
 
-Copyright (C) 2013-2020 Markus Junginger, Simon (https://www.cmonbaby.com)
+Copyright (C) 2013-2020 Markus Junginger, Simon (https://www.cmonbaby.com)  
 Arouter binaries and source code can be used according to the [Apache License, Version 2.0](LICENSE).
