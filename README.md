@@ -8,7 +8,7 @@
 * Very simple configuration
 * Lightweight (~32k jar)
 
-## Arouter in 3 steps
+## Arouter in 4 steps
 
 #### 1. Setting build.gradle (android application / android library):
 ```java
@@ -47,6 +47,21 @@ RouterManager.getInstance()
         // .navigation(this, requestCode);
         // .navigation(this, resultCode);
         .navigation(this);
+```
+
+#### 4. About Parameters
+```java
+@ARouter(path = "/library/LibraryActivity")
+public class LibraryActivity extends AppCompatActivity {
+    
+    @Parameter
+    String name;
+    
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        Log.e("params >>> ", name);
+    }
+}
 ```
 
 ## Add Arouter to your project
