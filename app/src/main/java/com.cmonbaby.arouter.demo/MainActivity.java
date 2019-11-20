@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         RouterManager.getInstance()
                 .build("/library/LibraryActivity")
                 .withString("name", "simon")
+                .withInt("age", 35)
+                .withBoolean("hasChildren", true)
                 .navigation(this, 666);
     }
 

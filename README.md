@@ -40,13 +40,31 @@ public class MainActivity extends AppCompatActivity {}
 
 #### 3. Intent and carry params
 ```java
-RouterManager.getInstance()
+RouterManager.getInstance() // singleton
+        // Arouter path
         .build("/library/LibraryActivity")
+        // String
         .withString("name", "simon")
-        // .withResultString("pwd", "123")
-        // .navigation(this, requestCode);
-        // .navigation(this, resultCode);
-        .navigation(this);
+        // Basic data type
+        .withInt("key", value)
+        .withBoolean("key", value)
+        .withByte("key", value)
+        .withChar("key", value)
+        .withDouble("key", value)
+        .withFloat("key", value)
+        .withLong("key", value)
+        .withShort("key", value)
+        // Serializable and Parcelable
+        .withSerializable("key", value)
+        .withParcelable("key", value)
+        // Bundle
+        .withBundle("key", value)
+        // Activate the callback
+        .withResultString("key", value)
+        // Intent jump
+        .navigation(this, requestCode) // startActivityForResult()
+        .navigation(this, resultCode) // setResult() + finish()
+        .navigation(this); // startActivity()
 ```
 
 #### 4. About Parameters
@@ -54,8 +72,17 @@ RouterManager.getInstance()
 @ARouter(path = "/library/LibraryActivity")
 public class LibraryActivity extends AppCompatActivity {
 
-    @Parameter
+    @Parameter // Parameter name = Field name
     String name;
+    
+    @Parameter(name = "totalCount") // Custom parameter name
+    int count;
+    
+    @Parameter
+    PersonalInfo info; // Javabean (must be 'implements Serializable or Parcelable')
+    
+    @Parameter
+    CustomInterface internal; // Public interface (must be 'extends Call')
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,9 +101,9 @@ public class LibraryActivity extends AppCompatActivity {
 
 Via Gradle:
 ```gradle
-implementation 'com.cmonbaby.arouter.core:arouter_core:2.1.0'
-implementation 'com.cmonbaby.arouter.annotation:arouter_annotation:2.1.0'
-annotationProcessor 'com.cmonbaby.arouter.compiler:arouter_compiler:2.1.0'
+implementation 'com.cmonbaby.arouter.core:arouter_core:2.1.1'
+implementation 'com.cmonbaby.arouter.annotation:arouter_annotation:2.1.1'
+annotationProcessor 'com.cmonbaby.arouter.compiler:arouter_compiler:2.1.1'
 ```
 
 Via Maven:
@@ -84,17 +111,17 @@ Via Maven:
 <dependency>
     <groupId>com.cmonbaby.arouter.annotation</groupId>
     <artifactId>arouter_annotation</artifactId>
-    <version>2.1.0</version>
+    <version>2.1.1</version>
 </dependency>
 <dependency>
     <groupId>com.cmonbaby.arouter.compiler</groupId>
     <artifactId>arouter_compiler</artifactId>
-    <version>2.1.0</version>
+    <version>2.1.1</version>
 </dependency>
 <dependency>
     <groupId>com.cmonbaby.arouter.core</groupId>
     <artifactId>arouter_core</artifactId>
-    <version>2.1.0</version>
+    <version>2.1.1</version>
 </dependency>
 ```
 
