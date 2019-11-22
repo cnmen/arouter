@@ -11,7 +11,7 @@
 ## Arouter in 4 steps
 
 #### 1. Setting build.gradle (android application / android library):
-```java
+```gradle
 def moduleName = project.name
 android {
     // ......
