@@ -40,13 +40,13 @@ public class MainActivity extends AppCompatActivity {}
 
 #### 3. Intent and carry params
 ```java
-RouterManager.getInstance() // singleton
+RouterManager.getInstance() // Singleton
         // Arouter path
         .build("/library/LibraryActivity")
         // String
         .withString("name", "simon")
         // Basic data type
-        .withInt("key", value)
+        .withInt("totalCount", 2333)
         .withBoolean("key", value)
         .withByte("key", value)
         .withChar("key", value)
@@ -81,8 +81,8 @@ public class LibraryActivity extends AppCompatActivity {
     @Parameter
     PersonalInfo info; // Javabean (must be 'implements Serializable or Parcelable')
     
-    @Parameter
-    CustomInterface internal; // Public interface (must be 'extends Call')
+    @Parameter(name = "/library/DrawableImpl")
+    OpenApi drawable; // Public interface (must be 'extends Call')
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,9 +101,9 @@ public class LibraryActivity extends AppCompatActivity {
 
 Via Gradle:
 ```gradle
-implementation 'com.cmonbaby.arouter.core:arouter_core:2.1.1'
-implementation 'com.cmonbaby.arouter.annotation:arouter_annotation:2.1.1'
-annotationProcessor 'com.cmonbaby.arouter.compiler:arouter_compiler:2.1.1'
+implementation 'com.cmonbaby.arouter.core:arouter_core:2.1.2'
+implementation 'com.cmonbaby.arouter.annotation:arouter_annotation:2.1.2'
+annotationProcessor 'com.cmonbaby.arouter.compiler:arouter_compiler:2.1.2'
 ```
 
 Via Maven:
@@ -111,17 +111,17 @@ Via Maven:
 <dependency>
     <groupId>com.cmonbaby.arouter.annotation</groupId>
     <artifactId>arouter_annotation</artifactId>
-    <version>2.1.1</version>
+    <version>2.1.2</version>
 </dependency>
 <dependency>
     <groupId>com.cmonbaby.arouter.compiler</groupId>
     <artifactId>arouter_compiler</artifactId>
-    <version>2.1.1</version>
+    <version>2.1.2</version>
 </dependency>
 <dependency>
     <groupId>com.cmonbaby.arouter.core</groupId>
     <artifactId>arouter_core</artifactId>
-    <version>2.1.1</version>
+    <version>2.1.2</version>
 </dependency>
 ```
 
