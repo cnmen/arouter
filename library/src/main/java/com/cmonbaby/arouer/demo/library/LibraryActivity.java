@@ -35,7 +35,8 @@ public class LibraryActivity extends AppCompatActivity {
     public void click(View view) {
         RouterManager.getInstance()
                 .build("/app/MainActivity")
-                .withResultString("pwd", "123")
+                .withString("pwd", "123")
+                .withResult()
                 .navigation(this);
     }
 }
