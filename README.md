@@ -104,9 +104,9 @@ public class LibraryActivity extends AppCompatActivity {
 
 Via Gradle:
 ```gradle
-implementation 'com.cmonbaby.arouter.core:arouter_core:2.1.7'
-implementation 'com.cmonbaby.arouter.annotation:arouter_annotation:2.1.7'
-annotationProcessor 'com.cmonbaby.arouter.compiler:arouter_compiler:2.1.7'
+implementation 'com.cmonbaby.arouter.core:arouter_core:2.2.0'
+implementation 'com.cmonbaby.arouter.annotation:arouter_annotation:2.2.0'
+annotationProcessor 'com.cmonbaby.arouter.compiler:arouter_compiler:2.2.0'
 ```
 
 Via Maven:
@@ -114,17 +114,17 @@ Via Maven:
 <dependency>
     <groupId>com.cmonbaby.arouter.annotation</groupId>
     <artifactId>arouter_annotation</artifactId>
-    <version>2.1.7</version>
+    <version>2.2.0</version>
 </dependency>
 <dependency>
     <groupId>com.cmonbaby.arouter.compiler</groupId>
     <artifactId>arouter_compiler</artifactId>
-    <version>2.1.7</version>
+    <version>2.2.0</version>
 </dependency>
 <dependency>
     <groupId>com.cmonbaby.arouter.core</groupId>
     <artifactId>arouter_core</artifactId>
-    <version>2.1.7</version>
+    <version>2.2.0</version>
 </dependency>
 ```
 
