@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void click() {
         RouterManager.getInstance() // Singleton
-                // Arouter path
+                // Arouter path(empty for setResult)
                 .build("/library/LibraryActivity")
                 // String
                 .withString("name", "simon")
@@ -62,11 +62,14 @@ public class MainActivity extends AppCompatActivity {
                 // .withBundle("key", value)
                 // Activate the callback
                 // .withResultString("key", value)
+                // finish destory
+                // .withFinish()
                 // Intent jump
                 // .navigation(this, requestCode) // startActivityForResult()
                 .navigation(this, 666);
                 // .navigation(this, resultCode) // setResult() + finish()
                 // .navigation(this); // startActivity()
+                // .navigation(getActivity()); // fragment
     }
 
     @Override

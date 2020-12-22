@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {}
 #### 3. Intent and carry params
 ```java
 RouterManager.getInstance() // Singleton
-        // Arouter path
+        // Arouter path(empty for setResult)
         .build("/library/LibraryActivity")
         // String
         .withString("name", "simon")
@@ -61,10 +61,13 @@ RouterManager.getInstance() // Singleton
         .withBundle("key", value)
         // Activate the callback
         .withResultString("key", value)
+        // finish destory
+        .withFinish()
         // Intent jump
         .navigation(this, requestCode) // startActivityForResult()
         .navigation(this, resultCode) // setResult() + finish()
         .navigation(this); // startActivity()
+        .navigation(getActivity()); // fragment
 ```
 
 #### 4. About Parameters
@@ -101,9 +104,9 @@ public class LibraryActivity extends AppCompatActivity {
 
 Via Gradle:
 ```gradle
-implementation 'com.cmonbaby.arouter.core:arouter_core:2.1.2'
-implementation 'com.cmonbaby.arouter.annotation:arouter_annotation:2.1.2'
-annotationProcessor 'com.cmonbaby.arouter.compiler:arouter_compiler:2.1.2'
+implementation 'com.cmonbaby.arouter.core:arouter_core:2.1.7'
+implementation 'com.cmonbaby.arouter.annotation:arouter_annotation:2.1.7'
+annotationProcessor 'com.cmonbaby.arouter.compiler:arouter_compiler:2.1.7'
 ```
 
 Via Maven:
@@ -111,17 +114,17 @@ Via Maven:
 <dependency>
     <groupId>com.cmonbaby.arouter.annotation</groupId>
     <artifactId>arouter_annotation</artifactId>
-    <version>2.1.2</version>
+    <version>2.1.7</version>
 </dependency>
 <dependency>
     <groupId>com.cmonbaby.arouter.compiler</groupId>
     <artifactId>arouter_compiler</artifactId>
-    <version>2.1.2</version>
+    <version>2.1.7</version>
 </dependency>
 <dependency>
     <groupId>com.cmonbaby.arouter.core</groupId>
     <artifactId>arouter_core</artifactId>
-    <version>2.1.2</version>
+    <version>2.1.7</version>
 </dependency>
 ```
 
